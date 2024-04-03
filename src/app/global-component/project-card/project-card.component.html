@@ -1,0 +1,25 @@
+<div class="card  justify-content-center" (click)="goToDetail(project.userId)">
+  <div class="d-flex justify-content-center  card-body  text-center">
+    <p class="card-text col-1">
+      {{project.userId}}
+    </p>
+    <p class=" card-text col-1">
+      {{project.id}}
+    </p>
+    <p class="card-text col-2">
+      {{project.title}}
+    </p>
+    <p class="card-text col-8">
+      {{project.body}}
+    </p>
+    <div *ngIf="isDetail" class="col-12 d-flex justify-content-center">
+      <button (click)="edit()" class="btn btn-warning mx-2">
+        editar
+      </button>
+      <button (click)="delete()" class="btn btn-danger mx-2">
+        eliminar
+      </button>
+    </div>
+  </div>
+
+</div>
